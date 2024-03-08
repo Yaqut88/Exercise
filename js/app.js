@@ -43,10 +43,6 @@ let regions = [
 
 
 
-// const head = document.getElementsByClassName('title');
-// head.innerHTML = '<h3>Azərbaycanın işgaldan azad olunan rayon və kəndlərinin siyahısı</h3>';
-// console.log(head.text)
-
 rayon = document.getElementById('region');
 
 for(let i=0; i<regions.length; i++){
@@ -63,18 +59,20 @@ console.log(rayon);
 
 // Ən çox kəndə sahib olan rayon adını göstərən funksiya
 //  bu funksiya tam yazılmayıb
-  let maxVillage = regions[0]
+ 
 
 function findRegionMoreVillages(){
+    let countVillage= [];
     for(let i=0; i<regions.length; i++){
-        console.log(regions[i].villages)
-        if(regions[i].villages > maxVillage){
-         console.log(regions[i].villages)
-        }
+      countVillage.push(regions[i].villages);
+    }
+    let maxVillage= Math.max(...countVillage);
+    for(let i=0; i<regions.length;i++ ){
+      if(regions[i].villages == maxVillage){
+console.log(regions[i].name)
+      }
     }
 }
-
- 
 
 findRegionMoreVillages()
 
