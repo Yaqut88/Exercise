@@ -11,7 +11,6 @@ let regions = [
         name: "Füzuli",
         villages:  53
     },
-   
     {
         name: "Qubadlı",
         villages:  41
@@ -36,8 +35,6 @@ let regions = [
         name: "Zəngilan",
         villages:  52
     },
-   
-   
     {
         name: "Tərtər",
         villages:  2
