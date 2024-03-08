@@ -109,13 +109,17 @@ for(let i=0; i<regions.length; i++){
 regionsWithA();
 
 // Azad edilən rayonlar arasında adı ən uzun olan rayonun necə kəndi olduğunu göstərən funksiya 
-// bu funksiyanı tam yaza bilmədim
-let regionsLengths = "";
+
 
 function MostVillagesCount(){
+    let namesRegions = [];
 for(let i=0; i<regions.length; i++){
-    if(regions[i].name.length> regionsLengths ){
-        console.log(regions[i.name]+regions[i].villages)
+   namesRegions.push(regions[i].name.length);
+}
+let longestWord = Math.max(...namesRegions);
+for(let i=0; i<regions.length; i++){
+    if(regions[i].name.length == longestWord){
+       console.log(regions[i].name)
     }
 }
 }
